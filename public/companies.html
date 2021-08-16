@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Core theme CSS (includes Bootstrap)-->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<!-- Bootstrap core JS-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Font Awesome icons -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<!-- Main CSS (includes Bootstrap)-->
+	<link href="css/bstyles.css" rel="stylesheet" />
+	<link href="css/companies.css" rel="stylesheet" />
+	<title>Company Search</title>
+</head>
+<body id="page-top">
+	<!-- Navigation-->
+	<a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+	<nav id="sidebar-wrapper">
+		<ul class="sidebar-nav">
+			<li class="sidebar-brand"><a href="">Data Boss</a></li>
+			<li class="sidebar-nav-item"><a href="index.html">Home</a></li>
+			<li class="sidebar-nav-item"><a href="#about">About</a></li>
+			<li class="sidebar-nav-item"><a href="#page-top">Company Search</a></li>
+			<li class="sidebar-nav-item"><a href="person.html">Person Search</a></li>
+			<li class="sidebar-nav-item"><a href="#contact">Contact</a></li>
+		</ul>
+	</nav>
+	<!-- Company Search -->
+	<section class="content-section bg-secondary text-center" id="company_search">
+            <div class="container px-4 px-lg-5">
+                <div class="content-section-heading">
+                    <h2 class="c-heading">Search for a Company</h2>
+                </div>
+				<div class="container" id="s-container"><br/>
+					<div class="row justify-content-center">
+						<div class="col-12 col-md-10 col-lg-8">
+							<form class="card card-sm c-form">
+								<div class="card-body row no-gutters align-items-center">
+									<div class="col-auto">
+										<i class="fas fa-search h4 text-body"></i>
+									</div>
+									<!--end of col-->
+									<div class="col">
+										<input class="form-control form-control-lg form-control-borderless" type="url" id="csearch" placeholder="Enter a Social Profile URL">
+									</div>
+									<!--end of col-->
+									<div class="col-auto">
+										<button class="btn btn-lg btn-secondary s-btn" onclick="getCompaniesFromServer(event)" type="submit">Search</button>
+									</div>
+									<!--end of col-->
+								</div>
+							</form>
+						</div>
+						<!--end of col-->
+					</div>
+				</div>
+			<div class="container" id="c-container">
+				<div class="row c-row">
+					<div class="col-md-6 col-xl-3 c-wrapper" id="hideable-left">
+						<div class="card m-b-30 c-card" id="company-card">
+							<div class="card-body row c-body-row">
+								<div class="col-6 imgs">
+									<a href=""><img src="https://media-exp1.licdn.com/dms/image/C560BAQE88xCsONDULQ/company-logo_200_200/0/1618231291419?e=1637193600&v=beta&t=n7TRn9INyfqIi1pmLZPjSuriiJKDCgVfhgwYS7cSeVY" alt="" class="img-fluid rounded-circle w-60"></a>
+								</div>
+								<div class="col-6 card-title align-self-center mb-0">
+									<h5>MICROSOFT</h5>
+									<p class="m-0">1975</p>
+									<p class="m-0">10001+</p>
+									<p class="m-0">Public</p>
+								</div>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><i class="fas fa-industry    float-right"></i>Computer software</li>
+								<li class="list-group-item"><i class="fas fa-map-marked    float-right"></i>Redmond, Washington, USA</li>
+								<li class="list-group-item"><i class="fas fa-globe    float-right"></i><a id="c-email" href="#">http://www.microsoft.com</a></li>
+							</ul>
+							<div class="card-body">
+								<ul class="social-links list-inline mb-0">
+									<li class="list-inline-item li-icon"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="https://facebook.com/microsoft" data-original-title="Facebook"><i class="fab fa-facebook-f    "></i></a></li>
+									<li class="list-inline-item li-icon"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="https://twitter.com/microsoft" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+									<li class="list-inline-item li-icon"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="https://www.linkedin.com/company/microsoft/" data-original-title="LinkedIn"><i class="fab fa-linkedin-in    "></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-xl-3 c-wrapper">
+						<div class="card m-b-30 c-card">
+							<div class="card-body row c-body-row">
+								<div class="col-6 imgs">
+									<a href=""><img src="https://media-exp1.licdn.com/dms/image/C4D0BAQGjwPKNaVZ7jQ/company-logo_200_200/0/1625578658814?e=1637193600&v=beta&t=3R6Mb0jyvbpooKui5hooT_2bXFlz8S2iUm0YwY5Fa4E" alt="" class="img-fluid rounded-circle w-60 c-img" id="c-img"></a>
+								</div>
+								<div class="col-6 card-title align-self-center mb-0" id="c-card-title">
+									<h5 id="c-name">IBM</h5>
+									<p class="m-0" id="c-founded">1911</p>
+									<p class="m-0" id="c-size">10001+</p>
+									<p class="m-0" id="c-type">Public</p>
+								</div>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item" id="c-industry"><i class="fas fa-industry    float-right"></i>Information technology and services</li>
+								<li class="list-group-item" id="c-locality"><i class="fas fa-map-marked    float-right"></i>New York, USA</li>
+								<li class="list-group-item"><i class="fas fa-globe    float-right"></i><a id="c-site" href="#">https://www.ibm.com</a></li>
+							</ul>
+							<div class="card-body">
+								<ul class="social-links list-inline mb-0">
+									<li class="list-inline-item li-icon"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" id="fb-link" href="https://facebook.com/ibm" data-original-title="Facebook"><i class="fab fa-facebook-f    "></i></a></li>
+									<li class="list-inline-item li-icon"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" id="t-link" href="https://twitter.com/ibm" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+									<li class="list-inline-item li-icon"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" id="l-link" href="https://www.linkedin.com/company/ibm/" data-original-title="LinkedIn"><i class="fab fa-linkedin-in    "></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-xl-3 c-wrapper" id="hideable-right">
+						<div class="card m-b-30 c-card">
+							<div class="card-body row c-body-row">
+								<div class="col-6 imgs">
+									<a href=""><img src="https://media-exp1.licdn.com/dms/image/C4D0BAQH2iVdVVCQksA/company-logo_200_200/0/1566207209882?e=1637193600&v=beta&t=oUWq7Z9cJDrHFkH8TvbalaHkslezkY7xd9aTQHaqVWc" alt="" class="img-fluid rounded-circle w-60"></a>
+								</div>
+								<div class="col-6 card-title align-self-center mb-0">
+									<h5>WIX</h5>
+									<p class="m-0">2006</p>
+									<p class="m-0">1001-5000</p>
+									<p class="m-0">Private</p>
+								</div>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><i class="fas fa-industry    float-right"></i>Internet</li>
+								<li class="list-group-item"><i class="fas fa-map-marked    float-right"></i>Tel Aviv, Israel</li>
+								<li class="list-group-item"><i class="fas fa-globe    float-right"></i><a href="#">http://www.wix.com</a></li>
+							</ul>
+							<div class="card-body">
+								<ul class="social-links list-inline mb-0">
+									<li class="list-inline-item li-icon"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="https://www.linkedin.com/company/wix-com/" data-original-title="Facebook"><i class="fab fa-facebook-f    "></i></a></li>
+									<li class="list-inline-item li-icon"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="https:///facebook.com/wix" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+									<li class="list-inline-item li-icon"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="https://twitter.com/wix" data-original-title="LinkedIn"><i class="fab fa-linkedin-in    "></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="js/bscripts.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+

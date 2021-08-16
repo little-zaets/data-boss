@@ -1,0 +1,188 @@
+
+
+/* Homepage sidebar */
+#sidebar-wrapper {
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  transition: all 0.4s ease 0s;
+  transform: translateX(250px);
+  background: #1D809F;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li.sidebar-nav-item a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 15px;
+}
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  font-size: 1.2rem;
+  background: rgba(52, 58, 64, 0.1);
+  height: 80px;
+  line-height: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+#sidebar-wrapper.active {
+  right: 250px;
+  width: 250px;
+  transition: all 0.4s ease 0s;
+}
+
+.menu-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  background: rgba(52, 58, 64, 0.5);
+  line-height: 50px;
+  z-index: 999;
+}
+.menu-toggle:focus, .menu-toggle:hover {
+  color: #fff;
+}
+.menu-toggle:hover {
+  background: #343a40;
+}
+
+/* bootdey */
+body {
+    background: #f5f5f5;
+}
+.c-card, .c-form {
+    border: none;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
+    margin-bottom: 30px;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 10px;
+    font-weight: 600;
+}
+.c-heading {
+	margin-bottom: 0;
+
+}
+.social-links li a {
+    -webkit-border-radius: 50%;
+    background-color: rgba(89,206,181,.85);
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 30px;
+    font-size: 12px;
+}
+a {
+    color: #707070;
+}
+
+/* bootsnip */
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+/* local css */
+#company_search {
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("/home/rinav/data_enrichment_search/public/assets/buildingsview.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: 2rem;
+	height: 100%;
+}
+.c-wrapper {
+	margin-right: 20px;
+	margin-left: 20px;
+	opacity: 0.9;
+	min-width: 300px;
+}
+#c-container {
+	display: flex;
+	justify-content: center;
+}
+.c-row {
+	justify-content: center;
+}
+.c-body-row {
+	min-height: 240px;
+	align-items: center;
+}
+.c-card {
+	min-height: 415px;
+	min-width: 320px;
+	max-width: 400px;
+	word-wrap: unset;
+}
+
+.imgs {
+	background-color: #fff;
+}
+.s-btn {
+	background-color:#1D809F;
+	color: #fff;
+	border-color: #1D809F;
+}
+.s-btn:hover {
+	z-index: 2;
+  	color: #17667f;
+  	background-color: #e9ecef;
+  	border-color: #1D809F;
+	box-shadow: 0 0 0 0.25rem rgba(29, 128, 159, 0.25);
+}
+
+a:hover {
+  color: #17667f;
+}
+.hide-me {
+	display: none;
+}
+#c-name {
+	font-size: 1rem;
+}

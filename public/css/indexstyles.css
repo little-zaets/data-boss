@@ -1,0 +1,21 @@
+.hcontainer {
+	color: black;
+	background-color: #fff;
+	opacity: 0.6;
+}
+.iheader {
+	opacity: 1 !important;
+	font-weight: bold;
+}
+.isubheader {
+	margin-bottom: 2rem !important;
+}
+.hbtn {
+	margin: 10px;
+}
+.lower-heading {
+	margin-bottom: unset !important;
+}
+#services {
+	padding-bottom: 4rem;
+}

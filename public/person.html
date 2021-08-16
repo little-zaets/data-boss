@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Core theme CSS (includes Bootstrap)-->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<!-- Bootstrap core JS-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Font Awesome icons -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<!-- Main CSS (includes Bootstrap)-->
+	<link href="css/bstyles.css" rel="stylesheet" />
+	<link href="css/companies.css" rel="stylesheet" />
+	<title>Person Search</title>
+</head>
+<body id="page-top">
+	<!-- Navigation-->
+	<a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+	<nav id="sidebar-wrapper">
+		<ul class="sidebar-nav">
+			<li class="sidebar-brand"><a href="">Data Boss</a></li>
+			<li class="sidebar-nav-item"><a href="index.html">Home</a></li>
+			<li class="sidebar-nav-item"><a href="#about">About</a></li>
+			<li class="sidebar-nav-item"><a href="companies.html">Company Search</a></li>
+			<li class="sidebar-nav-item"><a href="#page-top">Person Search</a></li>
+			<li class="sidebar-nav-item"><a href="#contact">Contact</a></li>
+		</ul>
+	</nav>
+	<!-- Company Search -->
+	<section class="content-section bg-secondary text-center" id="company_search">
+            <div class="container px-4 px-lg-5">
+                <div class="content-section-heading">
+                    <h2 class="c-heading">Search for a Person</h2>
+                </div>
+				<div class="container" id="p-container"><br/>
+					<div class="row justify-content-center">
+						<div class="col-12 col-md-10 col-lg-8">
+							<form class="card card-sm c-form">
+								<div class="card-body row no-gutters align-items-center">
+									<div class="col-auto">
+										<i class="fas fa-search h4 text-body"></i>
+									</div>
+									<!--end of col-->
+									<div class="col">
+										<input class="form-control form-control-lg form-control-borderless" type="url" id="psearch" placeholder="Enter a Social Profile URL">
+									</div>
+									<!--end of col-->
+									<div class="col-auto">
+										<button class="btn btn-lg btn-secondary s-btn" onclick="getPersonFromServer(event)" type="submit">Search</button>
+									</div>
+									<!--end of col-->
+								</div>
+							</form>
+						</div>
+						<!--end of col-->
+					</div>
+				</div>
+			<div class="container" id="c-container">
+				<div class="row c-row">
+					<div class="col-md-6 col-xl-3 c-wrapper" id="hideable-left">
+						<div class="card m-b-30 c-card">
+							<div class="card-body row c-body-row">
+								<div class="col-6 imgs">
+									<a href=""><img src="https://media-exp1.licdn.com/dms/image/C5603AQHHUuOSlRVA1w/profile-displayphoto-shrink_200_200/0/1579726624860?e=1634774400&v=beta&t=u1n-Tc8-Wk6hcFmBzLX30F6IAZ0kWIjYl0ErkMzmsxU" alt="" class="img-fluid rounded-circle w-60"></a>
+								</div>
+								<div class="col-6 card-title align-self-center mb-0">
+									<h5>Satya Nadella</h5>
+									<p class="m-0">Chairman and CEO at Microsoft</p>
+								</div>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><i class="fa fa-envelope float-right"></i><a href="#">satyan@microsoft.com</a></li>
+								<li class="list-group-item"><i class="fa fa-phone float-right"></i>+15034437070</li>
+								<li class="list-group-item"><i class="fas fa-map float-right"></i></li>
+							</ul>
+							<div class="card-body">
+								<ul class="social-links list-inline mb-0">
+									<li class="list-inline-item li-icon"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Facebook"><i class="fab fa-facebook-f    "></i></a></li>
+									<li class="list-inline-item li-icon"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+									<li class="list-inline-item li-icon"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="LinkedIn"><i class="fab fa-linkedin-in    "></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-xl-3 c-wrapper">
+						<div class="card m-b-30 c-card">
+							<div class="card-body row c-body-row">
+								<div class="col-6 imgs">
+									<a href=""><img src="https://media-exp1.licdn.com/dms/image/C4E03AQF2nf68VxP0AA/profile-displayphoto-shrink_200_200/0/1586145965110?e=1634774400&v=beta&t=o_p_KS99G1rktYr8DyBuEVRMAvcoyXtpvMGho3Q81-0" alt="" class="img-fluid rounded-circle w-60 p-img" id="p-img"></a>
+								</div>
+								<div class="col-6 card-title align-self-center mb-0">
+									<h5 id="p-name">Arvind Krishna</h5>
+									<p class="m-0" id="p-title">Chairman and Chief Executive Officer, IBM</p>
+									<p class="m-0" id="p-company"></p>
+								</div>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><i class="fa fa-envelope float-right"></i><a id="p-email" href="#">arvindkrisha@gmail.com</a></li>
+								<li class="list-group-item" id="p-phone">+19149453400<i class="fas fa-phone float-right"></i></li>
+								<li class="list-group-item" id="p-locality"><i class="fas fa-map float-right"></i></li>
+							</ul>
+							<div class="card-body">
+								<ul class="social-links list-inline mb-0">
+									<li class="list-inline-item li-icon"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" id="p-fb-link" href="" data-original-title="Facebook"><i class="fab fa-facebook-f    "></i></a></li>
+									<li class="list-inline-item li-icon"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" id="p-t-link" href="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+									<li class="list-inline-item li-icon"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" id="p-l-link" href="" data-original-title="LinkedIn"><i class="fab fa-linkedin-in    "></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-xl-3 c-wrapper" id="hideable-right">
+						<div class="card m-b-30 c-card">
+							<div class="card-body row c-body-row">
+								<div class="col-6 imgs">
+									<a href=""><img src="https://media-exp1.licdn.com/dms/image/C4D03AQHiFVd2V3ka3A/profile-displayphoto-shrink_200_200/0/1621357260185?e=1634774400&v=beta&t=rKvYIBIP_jTHm1fQKeSLMYLIEq_ZD2tJGb52cZNIof4" alt="" class="img-fluid rounded-circle w-60"></a>
+								</div>
+								<div class="col-6 card-title align-self-center mb-0">
+									<h5>Avishai Abrahami</h5>
+									<p class="m-0">CEO & Co-Founder at Wix.com</p>
+								</div>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><i class="fa fa-envelope float-right"></i><a href="#">abrahami.avishai@wix.com</a></li>
+								<li class="list-group-item">+14154138305<i class="fa fa-phone float-right"></i></li>
+								<li class="list-group-item"><i class="fas fa-map float-right"></i></li>
+							</ul>
+							<div class="card-body">
+								<ul class="social-links list-inline mb-0">
+									<li class="list-inline-item li-icon"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="linkedin.com/in/abrahami-avishai-6472b1" data-original-title="Facebook"><i class="fab fa-facebook-f    "></i></a></li>
+									<li class="list-inline-item li-icon"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+									<li class="list-inline-item li-icon"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="LinkedIn"><i class="fab fa-linkedin-in    "></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="js/bscripts.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
