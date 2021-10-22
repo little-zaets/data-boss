@@ -131,7 +131,7 @@ a {
 }
 /* local css */
 .custom-bg {
-	background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("/Users/rinav/projects/data-boss/public/assets/buildingsview.jpg");
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("/assets/buildingsview.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding-top: 2rem;
