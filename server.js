@@ -6,7 +6,12 @@ const app = exp();
 
 app.use(cors());
 
-app.use(exp.static(__dirname + "/public"));
+app.use(exp.static(__dirname+"/public"));
+
+app.get("/", (req, res)  => {
+  res.sendFile(__dirname+ "/index.html");
+  res.end;
+});
 
 //go to modules - use axios to get the companies 
 //and send back to the frontend
@@ -29,5 +34,6 @@ app.get('/people', (req, res) => {
 			res.send({ message: e.message })
 	})
 })
+console.log(process.env)
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
