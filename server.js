@@ -6,6 +6,8 @@ const app = exp();
 
 app.use(cors());
 
+app.use(exp.static(__dirname + "/public"));
+
 //go to modules - use axios to get the companies 
 //and send back to the frontend
 app.get('/companies', (req, res) => {
