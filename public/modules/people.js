@@ -1,10 +1,10 @@
-const axios = require('axios');
+const axios = require('axios').default;
 const url = 'https://api.peopledatalabs.com/v5/person/enrich?';
-const apiKey = '2d3ed476c9587fd18aa243ba014da6c5476d98591e074e6bc38c2336f0a6cba4';
+const apiKey = '94fda0b41527114f758375b3b2b19bc873e187f549cacf42a4335237fb88a26e';
 const getPerson = async (profile) => {
 	console.log('person profile', profile);
 	try {
-		const res = await axios.get(`${url}api_key=${apiKey}&profile=${profile}`);
+		const res = await axios.get(`${url}api_key=${apiKey}&profile=${profile}`, );
 		const person = await res.data;
 		return person;
 	}

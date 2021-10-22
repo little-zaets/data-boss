@@ -11,16 +11,15 @@ function getCompaniesFromServer(event) {
 		return;
 	}
 	else {
-		fetch(`http://localhost:3000/companies?profile=${input.value}`)
-			.then(res => res.json())
-			.then(data => {
-				console.log('data:', data);
-				embedCompanyData(data);
-
-			})
-			.catch(err => {
-				console.log(err)
-			})
+		fetch(`${process.env.API_URL}/companies?profile=${input.value}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("data:", data);
+        embedCompanyData(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 	}
 	input.value = "";
 }
@@ -37,7 +36,7 @@ function getPersonFromServer(event) {
 		return;
 	}
 	else {
-		fetch(`http://localhost:3000/people?profile=${input.value}`)
+		fetch(`${process.env.API_URL}/people?profile=${input.value}`)
 		.then(res => res.json())
 		.then(data => {
 			console.log(data);

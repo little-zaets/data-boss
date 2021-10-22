@@ -1,6 +1,6 @@
-const axios = require('axios');
+const axios = require('axios').default;
 const url = 'https://api.peopledatalabs.com/v5/company/enrich?';
-const apiKey = '2d3ed476c9587fd18aa243ba014da6c5476d98591e074e6bc38c2336f0a6cba4';
+const apiKey = 'c207248bab65b81c1e0d233d26cb6dc62c4abc3489aaa8f4ddf51db0207be5f5';
 const getCompanies = async (profile) => {
 	console.log('companies profile', profile);
 	try {

@@ -5,7 +5,7 @@
   position: fixed;
   z-index: 2;
   right: 0;
-  width: 250px;
+  width: 250px;          
   height: 100%;
   transition: all 0.4s ease 0s;
   transform: translateX(250px);
@@ -92,7 +92,7 @@ body {
 .c-card, .c-form {
     border: none;
     -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.6);
     margin-bottom: 30px;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -130,17 +130,16 @@ a {
     box-shadow: none;
 }
 /* local css */
-#company_search {
-	background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("/home/rinav/data_enrichment_search/public/assets/buildingsview.jpg");
+.custom-bg {
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("/Users/rinav/projects/data-boss/public/assets/buildingsview.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding-top: 2rem;
-	height: 100%;
 }
 .c-wrapper {
 	margin-right: 20px;
 	margin-left: 20px;
-	opacity: 0.9;
+	opacity: 0.95;
 	min-width: 300px;
 }
 #c-container {
@@ -156,13 +155,14 @@ a {
 }
 .c-card {
 	min-height: 415px;
-	min-width: 320px;
-	max-width: 400px;
+	min-width: 290px;
+	max-width: 300px;
 	word-wrap: unset;
 }
 
 .imgs {
 	background-color: #fff;
+  min-width: 113px;
 }
 .s-btn {
 	background-color:#1D809F;
@@ -185,4 +185,22 @@ a:hover {
 }
 #c-name {
 	font-size: 1rem;
+}
+.c-links {
+  padding-top: 1.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+}
+.card-data {
+  min-height: 145px;
+  justify-content: center;
+}
+.p-img {
+  max-height:140px;
+}
+@media (min-width: 1200px) {
+  .custom-bg {
+   height: 100%;
+  }
 }

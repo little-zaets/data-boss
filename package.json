@@ -1,18 +1,27 @@
 {
-  "name": "data_enrichment_search",
+  "name": "data-boss",
   "version": "1.0.0",
-  "description": "",
-  "main": "script.js",
+  "description": "Developer's.Institute Hackathon entry: Node JS app for data enrichment using PDL API.  You can view the demo [here](https://little-zaets.github.io/data-boss/)",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/little-zaets/data-boss.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/little-zaets/data-boss/issues"
+  },
+  "homepage": "https://github.com/little-zaets/data-boss#readme",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.23.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.14"
   }
 }
