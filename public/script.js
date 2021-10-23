@@ -11,7 +11,7 @@ function getCompaniesFromServer(event) {
 		return;
 	}
 	else {
-		fetch(`${process.env.API_URL}/companies?profile=${input.value}`)
+		fetch(`/companies?profile=${input.value}`)
       .then((res) => res.json())
       .then((data) => {
         console.log("data:", data);
@@ -36,7 +36,7 @@ function getPersonFromServer(event) {
 		return;
 	}
 	else {
-		fetch(`${process.env.API_URL}/people?profile=${input.value}`)
+		fetch(`/people?profile=${input.value}`)
 		.then(res => res.json())
 		.then(data => {
 			console.log(data);
@@ -76,7 +76,7 @@ function embedCompanyData(data) {
 	let li = document.getElementById("l-link");
 	let img = document.getElementById("c-img");
 
-	cName.innerHTML = data.name.toUpperCase();
+	img.src = "https://www.obs-banyuls.fr/images/observer/logo_boss.jpg";
 	cFounded.innerHTML = data.founded;
 	cSize.innerHTML = data.size;
 	cType.innerText = capitalizeFirstLetter(data.type);
@@ -86,7 +86,7 @@ function embedCompanyData(data) {
 	fb.href = data.facebook_url;
 	tw.href = data.twitter_url;
 	li.href = data.linkedin_url;
-	img.src = 'https://www.obs-banyuls.fr/images/observer/logo_boss.jpg';
+	cName.innerHTML = data.name.toUpperCase();
 }
 
 function embedPersonData(data) {
@@ -101,14 +101,14 @@ function embedPersonData(data) {
 	let li = document.getElementById("p-l-link").href;
 	let img = document.getElementById("p-img");
 
+	img.src = "https://www.obs-banyuls.fr/images/observer/logo_boss.jpg";
 	pName.innerHTML = data.data.full_name.toUpperCase();
 	pTitle.innerHTML = capitalizeFirstLetter(data.data.job_title);
-	pCompany.innerHTML = capitalizeFirstLetter(data.data.job_company_name);
 	pEmail.innerHTML = data.data.emails[0].address;
 	pPhone.innerText = data.data.phone_numbers[0];
 	pLocality.innerText = capitalizeFirstLetter(data.data.location_name);
 	fb.href = `https://${data.data.facebook_url}`;
 	tw.href = `https://${data.data.twitter_url}`;
 	li.href = `https://${data.data.linkedin_url}`;
-	img.src = 'https://www.obs-banyuls.fr/images/observer/logo_boss.jpg';
+	pCompany.innerHTML = capitalizeFirstLetter(data.data.job_company_name);
 }
