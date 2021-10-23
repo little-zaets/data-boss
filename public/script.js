@@ -96,9 +96,9 @@ function embedPersonData(data) {
 	let pEmail = document.getElementById("p-email");
 	let pPhone = document.getElementById("p-phone");
 	let pLocality = document.getElementById("p-locality");
-	let fb = document.getElementById("p-fb-link").href;
-	let tw = document.getElementById("p-t-link").href;
-	let li = document.getElementById("p-l-link").href;
+	let fb = document.getElementById("p-fb-link");
+	let tw = document.getElementById("p-t-link");
+	let li = document.getElementById("p-l-link");
 	let img = document.getElementById("p-img");
 
 	img.src = "https://www.obs-banyuls.fr/images/observer/logo_boss.jpg";
@@ -107,8 +107,8 @@ function embedPersonData(data) {
 	pEmail.innerHTML = data.data.emails[0].address;
 	pPhone.innerText = data.data.phone_numbers[0];
 	pLocality.innerText = capitalizeFirstLetter(data.data.location_name);
-	fb = `https://${data.data.facebook_url}`;
-	tw = `https://${data.data.twitter_url}`;
-	li = `https://${data.data.linkedin_url}`;
+	fb.href = `https://${data.data.facebook_url}`;
+	tw.href = `https://${data.data.twitter_url}`;
+	li.href = `https://${data.data.linkedin_url}`;
 	pCompany.innerHTML = capitalizeFirstLetter(data.data.job_company_name);
 }
