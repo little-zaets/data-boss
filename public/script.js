@@ -107,8 +107,8 @@ function embedPersonData(data) {
 	pEmail.innerHTML = data.data.emails[0].address;
 	pPhone.innerText = data.data.phone_numbers[0];
 	pLocality.innerText = capitalizeFirstLetter(data.data.location_name);
-	fb.href = `https://${data.data.facebook_url}`;
-	tw.href = `https://${data.data.twitter_url}`;
-	li.href = `https://${data.data.linkedin_url}`;
+	fb = `https://${data.data.facebook_url}`;
+	tw = `https://${data.data.twitter_url}`;
+	li = `https://${data.data.linkedin_url}`;
 	pCompany.innerHTML = capitalizeFirstLetter(data.data.job_company_name);
 }
